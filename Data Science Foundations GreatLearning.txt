@@ -1,0 +1,232 @@
+[1. Intro to DS]
+Data == collection of facts
+
+Numbers, text, characters, images, videos.
+
+
+
+
+Data "back then"
+
+ 20/30 years ago
+kilobytes. Data was small, storage was sparse, and structured.
+
+The data was in one single format and it was structured. It was tabular, present in rows and columns, and there wasn't really any important method to analyse the data.
+
+"modern" data
+
+huge and unstructured 
+The data is "not present in your typical row and column format". Data that you cannot take and fit into a typical table of row and column format.
+Videos and images are tagged as unstructured data.
+
+With so much data, it is very important to leverage the data for our help. We are supposed to use this data to answer business questions. This is where data science comes in.
+
+Text Mining -- There are a library of good words and char combos, and a library of bad words and char combos. If the bad out-weighs the good, or passes a threshold, the email is marked as spam. Or the comment is marked as nefarious.
+
+
+
+[2. DS Life Cycle]
+
+APP AlPeR (Alper)
+
+Data Acquisition, Data Pre-Processing, Machine Learning Algorithm, Pattern Evaluation, knowledge Representation 
+
+Data --A--cquisition,
+ Data --P--re---P--rocessing,
+ Machine Learning --Al--gorithm,
+ --P--attern --E--valuation,
+ knowledge --R--epresentation 
+
+Data Acquisition
+- Collect from multiple sources, data storage in one place, target data
+
+All of these data files have different formats, so integrate them all into the same format.
+
+Target data- not every data point is essential to solve the problem statement. if only 30 of 100 files are useful, they're the target data files.
+
+
+ 
+Pre-Processing the data 
+(aka Exploratory Data Analysis)
+	This stage takes up 50 to 70% of your time as a Data Scientist.
+	Converting the raw data into tidy data, on which you can apply your (email) algorithms.
+	Two main tasks: Data Manipulation and Data Visualisation.
+
+
+manipulation --------
+EXAMPLE
+Huge spreadsheet of 100col and 1million rows. Find which employees are over 30 and salary of  less than 10'000 rupees. To find this info, use different manipulation techniques (Languages such as Python, R (?), and SQL ("Sequel"). Writing a line of code can easily search through all of the dataset.
+
+Visualisation --------
+
+Machine Learning
+	Application of intelligent algorithms to find meaningful information from the data.
+
+One you have the data all cleaned up, now to build the ML algorithm.
+
+Depending on the Problem statement, apply one of the following (email) ___ ML algorithms:
+
+classification, regression, or clustering
+
+Ask you to classify something into different groups.
+
+Asks you to predict something on the basis of something.
+
+Asks you to cluster the data into different groups, or segments.
+
+Look into difference between classification and clustering within the context of ML Algorithms.
+
+Pattern Evaluation
+	Once Data Mining techniques have been applied, the results have to be evaluated.
+
+From the ML Algorithms, you will get some result, but you cannot be sure the result is correct and useful. Evaluate the result which you get.
+
+Useful means it solves the problem statement. If it does not, then the result is not useful enough to use.
+
+Check for the accuracy (correctness and usefullness) of the result.
+
+Less than 50/50 probabilty, may be in a percentage, the model is extememly baseline. It will need to be tweeked.
+
+If the result is both correct and useful, then it is a good final result.
+
+
+Knowledge Representation
+The identified patterns must be represented using a simple, aesthetic graph. This can be presented to whoever needed the Problem Statement solved.
+
+
+
+
+
+
+
+
+
+
+[3. Data Mining Tasks]
+
+
+-- Anomaly Detection --
+
+	Identification of unusual patterns and/or outliers helps in understanding the variation in data.
+	Usually in the Pre-Processing stage of the DS Life Cycle.
+	Can indicate incorrect or missing data. Might even just be an error in the columns' names or information input into the wrong columns. Maybe a billionaire attended the event and temporarily (falsely) increased the average income of patrons. That billionaire is this dataset's anomaly.
+	You cannot let a data point at an extremity of the scale influence the data.
+
+EXAMPLE
+	A ten-item dataset. Eight of these have values between 4 and 6, and the remaining two have values of 20. Because of the remaining two data points, the data is skewed to a higher value. To fix this, the outliers are ignored (removed) so as to not allow them to skew everything.
+
+
+-- Association Rule Mining --
+	Finds interesting associations amongst different entities.
+
+EXAMPLE
+	Beer Diaper Syndrome  - (men?) buying diapers were likely to buy been at the same visit to the grocery store.
+
+If a store can see "usually bought together" items, they can place them near each other to upsell or cross-sell. Like having fancier pens next to the notebooks, the customer is likely to buy the pen at the same time. Papermate would like their pens here.
+
+Or selling ibuprofen at the cash register of a liquor store. (IDK if that is allowed.)
+ 
+
+	
+[4. Intro to Machine Learning]
+
+	The process of feeding the machine a ton of images of ___fish___ until it learns all of the features associated with ___fish___. We are training this machine to learn that a ___fish___ will have ___fins___, ___two eyes___, ___normally has an oval shape___, ___has a tail___, ___found in water__. These features are fed to the machine in the "Training Phase". Then you move on to the next image or give it "test data" to determine how much it has learned.
+
+Training phase -- give the machine lots of data so it learns the features associated with the data.
+
+Categories of Machine Learning:
+Supervised Learning and Unsupervised Learning. [Also Spree Enforcement Learning, which we skipped]
+
+
+
+
+-- Supervised Learning --
+	Supered always has both an independent variable and a dependent variable.
+
+	Input variable		x	independent
+	Output variable 	y	dependent
+
+		y = f(x)
+
+	Supered has two methods: classification and regression methods.
+
+	___Classification Method____
+- The process of predicting the class of a new variable.
+- Dependent variable (y) is categorical in nature. Always either binary or multilayered.
+
+Example: Do patients have cancer on the basis of whether they smoke?
+
+	Smoker? Y/N	->	cancer? Y/N
+
+	This example is an example of the binary categorical nature. Bin just has 1 or 0, so it has just two categories, yes or no.
+
+	with 1000 patients, this only has two columns. Column 1) Smoker? with the categories of Y and N, and column 2) Cancer? with the categories Y or N.
+
+100 patients with two columns with two categories for each column.
+
+
+
+	___Regression Method____
+- Used to estimate the relationship between different entities.
+- Tells us the relationship between the dependent variable (y) and the independent variable (x).
+- Dependent variable (y) will be a continuous numerical. 
+
+Example: Students' likely entry exam scores based on their GPAs.
+
+	  |    /	  Axises
+	y |  /		x == idv == GPA	
+	  |/____	y == dv  == exam score
+	     x
+
+	The chart shows a linear relationship once all of the points are plotted. This tells us that a higher GPA is related to a higher entry exam score.
+
+
+Example 2: If GPA is 8.3, than what is the likely exam score?
+	Draw an imaginary line from x on the x-axis, to the diagonal (diangular is not a word) line, then to the y-axis.
+	Answer is ~312 for the exam score.
+
+
+		
+-- Unsupervised Learning --
+- Does not have an idv or dv. Just has data points without class labels or tags.
+
+Method: Clustering
+
+
+<a> * given picture of 6 items. 3 cars, 3 bikes.*
+
+-unsupervised learning algorithm is built on top of the data. This algorithm automatically divided the data into two clusters: <b> cars, and <c> bikes.
+
+- An unsupervised Learning Algorithm helps you to understand the underlying structure of the data. You will have to keep two things in mind "inter-cluster similarities" and "inter-cluster dissimilarities". 
+
+
+[5. Languages for Data Science]
+Front-runners: Python and R.
+
+- both provide lots of libraries for DS purposes.
+- both have huge communities.
+- Cross-platform independent -- both work on any computer OS
+
+__R__
+- developed by statisticians for statisticians.
+- First choice for statistical analysis
+- download: "download r" then pick "cran.r-project.org" for the language, then the IDE is "rstudio" After course, can probably switch to a non-dedicated? Confirm later.
+	- used ggplot2 library in the example.
+
+__Python__
+- extremely versatile
+- one of the most popular languages for DS purposes, so it is easy to implement machine learning algorithms and deep learning frameworks.
+- download: "download python" and pick "python.org", then the distribution called "anaconda" pick "anaconda.com" and individual edition. It will provide all of the toolkits for Python. Anaconda saved you from having to install the additional libraries that you require for DS, and it installs an IDE called Jupyter Notebook. It is web-based.
+- To Use: Win > anaconda prompt > type in "jupyter notebook" and press enter and wait for the IDE to load. 
+
+
+
+NEXT: Analytics Landscape section
+
+https://olympus.mygreatlearning.com/courses/13680/pages/analytics-landscape-part-1?module_item_id=615457
+
+
+
+
+
+
